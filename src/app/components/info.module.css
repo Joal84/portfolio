@@ -1,9 +1,11 @@
 .container {
-  width: 800px;
-  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  display: flex;
+  gap: 4.2rem;
 }
 .info {
-  margin-bottom: 6.2rem;
+  width: 800px;
 }
 .info p {
   font-size: 2rem;
@@ -14,7 +16,24 @@
   overflow-y: hidden;
 }
 .contactContainer {
+  margin-top: 3.6rem;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+}
+.mediaContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6.7rem;
+  width: 500px;
+  max-width: 100%;
+  background-color: var(--darkestgrey-color);
+  padding: 2.6rem;
+  border-radius: var(--border-radious);
+}
+.spotify,
+.goodread {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }

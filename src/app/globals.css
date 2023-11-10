@@ -7,6 +7,9 @@
   );
   --white-color: #f5f5f5;
   --darkgrey-color: #292929;
+  --darkestgrey-color: #151515;
+  --link-color: #ffe662;
+  --border-radious: 12px;
 }
 *,
 *::before,

@@ -2,7 +2,8 @@ import React from "react";
 import _style from "./info.module.css";
 import SubTitle from "./SubTitle";
 import Contacts from "./Contacts";
-
+import Spotify from "./Spotify";
+import Goodreads from "./Goodreads";
 export default function Info() {
   return (
     <section className={_style.container}>
@@ -31,10 +32,20 @@ export default function Info() {
           Beyond my professional pursuits, my interests encompass: IoT, A.I,
           photography, movies, manga, philosophy, comedy and video games.
         </p>
+        <div className={_style.contactContainer}>
+          <SubTitle title="Contacts & Downloads" />
+          <Contacts />
+        </div>
       </div>
-      <div className={_style.contactContainer}>
-        <SubTitle title="Contacts & Downloads" />
-        <Contacts />
+      <div className={_style.mediaContainer}>
+        <div className={_style.spotify}>
+          <SubTitle title="What I’m Listening" />
+          <Spotify />
+        </div>
+        <div className={_style.goodread}>
+          <SubTitle title="What I’m Reading" />
+          <Goodreads />
+        </div>
       </div>
     </section>
   );
