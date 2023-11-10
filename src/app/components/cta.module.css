@@ -1,0 +1,27 @@
+.container {
+  width: 100svw;
+  height: calc(100svh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.headerTitle {
+  width: 990px;
+  height: auto;
+  overflow-y: hidden;
+  text-align: center;
+  font-size: 6.4rem;
+  font-weight: 400;
+  line-height: 90.5%; /* 57.92px */
+  letter-spacing: 9.92px;
+  background: linear-gradient(180deg, #76def5 0%, #ffcb7c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.arrow {
+  width: 12rem;
+}

@@ -1,0 +1,31 @@
+.icon {
+  width: 50px;
+  stroke-width: 2px;
+}
+.contactContainer {
+  display: flex;
+  gap: 2.6rem;
+}
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #585858;
+  width: 120px;
+  height: 100px;
+  border-radius: 12px;
+  margin-left: 20px;
+}
+.singleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.singleContainer h3 {
+  margin-top: 1rem;
+}
+.download h3 {
+  margin-top: 1rem;
+}

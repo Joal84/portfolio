@@ -1,0 +1,26 @@
+.container {
+  margin: 0 auto;
+  display: flex;
+  width: 90%;
+  height: auto;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.title {
+  text-transform: uppercase;
+  color: var(--white-color);
+  font-size: 4rem;
+  margin-right: 2rem;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+.line {
+  background-color: var(--white-color);
+  opacity: 50%;
+  height: 3px;
+  flex-shrink: 1;
+  flex-grow: 0;
+  flex-basis: 100%;
+  border-radius: 100px;
+  z-index: -1;
+}
