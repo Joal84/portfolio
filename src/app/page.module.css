@@ -3,15 +3,26 @@
   width: 100svw;
   height: 400px;
   background-position: 90% 20%;
+  filter: saturate(69%);
+  margin-top: var(--midsmall-space);
 }
 .backgroundAbout {
   width: 100svw;
-  padding-bottom: 60px;
+  padding-bottom: var(--biggest-space);
   height: auto;
   background-color: var(--darkgrey-color);
+  margin-bottom: var(--biggest-space);
 }
 .aboutContainer {
   margin: 0 auto;
   width: 80%;
-  margin-top: 4.6rem;
+  margin-top: var(--midbig-space);
+}
+.projectsContainer {
+  margin: var(--big-space) auto 0 auto;
+  width: 80%;
+  display: flex;
+  gap: var(--midbig-space);
+  align-items: center;
+  justify-content: center;
 }

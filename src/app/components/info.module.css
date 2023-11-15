@@ -2,38 +2,39 @@
   margin: 0 auto;
   max-width: 100%;
   display: flex;
-  gap: 4.2rem;
+  justify-content: space-between;
+  gap: var(--midbig-space);
 }
 .info {
-  width: 800px;
+  width: 950px;
 }
 .info p {
   font-size: 2rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 110%;
+  line-height: 120%;
   letter-spacing: 0.5px;
   overflow-y: hidden;
 }
 .contactContainer {
-  margin-top: 3.6rem;
+  margin-top: var(--midbig-space);
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: var(--small-space);
 }
 .mediaContainer {
   display: flex;
   flex-direction: column;
-  gap: 6.7rem;
+  gap: var(--midbig-space);
   width: 500px;
   max-width: 100%;
   background-color: var(--darkestgrey-color);
-  padding: 2.6rem;
+  padding: var(--small-space);
   border-radius: var(--border-radious);
 }
 .spotify,
 .goodread {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: var(--smallest-space);
 }

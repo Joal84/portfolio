@@ -1,0 +1,47 @@
+.cardContainer {
+  width: 400px;
+  height: 600px;
+  background-color: #2e4242;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  padding: var(--smallest-space);
+  gap: var(--smallest-space);
+  margin-bottom: var(--biggest-space);
+}
+.image {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+}
+
+.description {
+  margin-bottom: 16px;
+  overflow: hidden;
+  line-height: 20px;
+  height: 110px;
+}
+.links {
+  display: flex;
+  gap: var(--smallest-space);
+  align-self: start;
+
+  height: 60px;
+}
+.icons {
+  width: 40px;
+  stroke-width: 2px;
+}
+.iconWww {
+  width: 38px;
+  stroke-width: 2px;
+}
+.title {
+  align-self: start;
+  overflow: hidden;
+}
+.altColorContainer {
+  background-color: #1f2727;
+}
