@@ -29,3 +29,7 @@
 .download h3 {
   margin-top: 1rem;
 }
+.icon_small {
+  width: 35px;
+  stroke-width: 2px;
+}

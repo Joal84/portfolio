@@ -34,7 +34,7 @@ export default function Info() {
         </p>
         <div className={_style.contactContainer}>
           <SubTitle title="Contacts & Downloads" />
-          <Contacts />
+          <Contacts footer={false} />
         </div>
       </div>
       <div className={_style.mediaContainer}>

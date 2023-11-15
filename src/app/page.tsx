@@ -4,6 +4,7 @@ import Cta from "./components/Cta";
 import Divider from "./components/Divider";
 import Info from "./components/Info";
 import Card from "./components/Card";
+import TechStack from "./components/TechStack";
 
 export default function Home() {
   return (
@@ -49,6 +50,7 @@ export default function Home() {
         title="Tech Stack"
         infoText="Includes programming languages, frameworks, libraries, databases, and tools I’m skilled in."
       />
+      <TechStack />
     </main>
   );
 }
