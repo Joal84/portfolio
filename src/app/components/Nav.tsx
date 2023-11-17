@@ -1,17 +1,44 @@
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import _style from "./nav.module.css";
+
+export const onClickHandler = (
+  e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  id: string
+) => {
+  e.preventDefault();
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+};
 
 export default function Nav() {
   const [sticky, setSticky] = useState(false);
+  const [currentSection, setCurrentSection] = useState<string | null>(null);
 
   const stickNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
       windowHeight > 200 ? setSticky(true) : setSticky(false);
+      if (windowHeight < 700) {
+        setCurrentSection("none");
+      }
+      if (windowHeight > 700 && windowHeight < 1800) {
+        setCurrentSection("about");
+      }
+      if (windowHeight > 1800 && windowHeight < 2800) {
+        setCurrentSection("projects");
+      }
+      if (windowHeight > 2800 && windowHeight < 3500) {
+        setCurrentSection("tech");
+      }
     }
   };
-
+  console.log(currentSection);
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
 
@@ -31,9 +58,39 @@ export default function Nav() {
             <div className={_style.greetings}>Good Afternoon</div>
           </div>
           <ul className={_style.linkContainer}>
-            <li className={_style.link}>About</li>
-            <li className={_style.link}>Projects</li>
-            <li className={_style.link}>Tech Stack</li>
+            <Link
+              className={`${_style.link} ${
+                currentSection === "about" ? _style.active : ""
+              }`}
+              href="#about"
+              onClick={(e) => {
+                onClickHandler(e, "about");
+              }}
+            >
+              About
+            </Link>
+            <Link
+              className={`${_style.link} ${
+                currentSection === "projects" ? _style.active : ""
+              }`}
+              href="#projects"
+              onClick={(e) => {
+                onClickHandler(e, "projects");
+              }}
+            >
+              Projects
+            </Link>
+            <Link
+              className={`${_style.link} ${
+                currentSection === "tech" ? _style.active : ""
+              }`}
+              href="#tech"
+              onClick={(e) => {
+                onClickHandler(e, "tech");
+              }}
+            >
+              Tech Stack
+            </Link>
           </ul>
         </div>
       </nav>

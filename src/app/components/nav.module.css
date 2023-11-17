@@ -40,17 +40,38 @@
   font-size: 4.4rem;
 }
 .linkContainer {
+  max-width: 100%;
   display: flex;
   gap: var(--small-space);
   list-style-type: none;
   align-items: center;
+  justify-content: center;
 }
 .link {
   font-size: 2rem;
+
   text-transform: uppercase;
   font-weight: 400;
 }
 .sticky {
   position: fixed;
   top: 0%;
+}
+.active {
+  position: relative;
+  cursor: pointer;
+  transition: all 1.2s;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--link-color);
+  bottom: 0;
+  right: 0px;
+  top: 30px;
+  transform-origin: center;
+  transform: scaleX(1);
+  transition: var(--transition);
 }

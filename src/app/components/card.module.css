@@ -1,14 +1,14 @@
 .cardContainer {
   width: 400px;
-  height: 600px;
+  height: 660px;
   background-color: #2e4242;
-  display: flex;
+  display: grid;
   flex-direction: column;
-  justify-content: center;
+
   align-items: center;
   border-radius: 12px;
   padding: var(--smallest-space);
-  gap: var(--smallest-space);
+  gap: 8px;
   margin-bottom: var(--biggest-space);
 }
 .image {
@@ -18,17 +18,13 @@
 }
 
 .description {
-  margin-bottom: 16px;
-  overflow: hidden;
   line-height: 20px;
-  height: 110px;
+  align-self: start;
 }
 .links {
   display: flex;
   gap: var(--smallest-space);
-  align-self: start;
-
-  height: 60px;
+  align-self: end;
 }
 .icons {
   width: 40px;
@@ -39,9 +35,23 @@
   stroke-width: 2px;
 }
 .title {
-  align-self: start;
-  overflow: hidden;
+  justify-self: start;
+  align-self: initial;
 }
 .altColorContainer {
   background-color: #1f2727;
+}
+.icon_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.icon_container h3 {
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: 300;
+  justify-self: end;
 }

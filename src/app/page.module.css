@@ -16,7 +16,7 @@
 .aboutContainer {
   margin: 0 auto;
   width: 80%;
-  margin-top: var(--midbig-space);
+  padding-top: var(--midbig-space);
 }
 .projectsContainer {
   margin: var(--big-space) auto 0 auto;
@@ -25,4 +25,14 @@
   gap: var(--midbig-space);
   align-items: center;
   justify-content: center;
+}
+.line {
+  position: fixed; /* Fixed position to keep it in view */
+  top: 0;
+  left: 50.4%;
+  transform: translateX(-50%); /* Center the line horizontally */
+  height: 100%; /* Full height of the viewport */
+  width: 3px;
+  background-color: #ffffff; /* Change the color as needed */
+  z-index: -1; /* Set a high z-index to make sure it's behind other components */
 }

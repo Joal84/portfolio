@@ -16,11 +16,12 @@
 .line {
   background-color: var(--link-color);
   opacity: 80%;
-  height: 3px;
+  height: 10px;
+  width: 80px;
   flex-shrink: 1;
   flex-grow: 0;
-  flex-basis: 5%;
-  border-radius: 100px;
+
+  border-radius: 300px;
   z-index: -1;
 }
 .infoText {

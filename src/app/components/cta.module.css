@@ -10,18 +10,39 @@
 
 .headerTitle {
   width: 990px;
-  height: auto;
-  overflow-y: hidden;
+  max-width: 100%;
   text-align: center;
   font-size: 6.4rem;
   font-weight: 500;
   line-height: 90.5%; /* 57.92px */
   letter-spacing: 9.92px;
-  background: linear-gradient(180deg, #76def5 0%, #ffcb7c 100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 53, 53, 1) 1%,
+    rgba(241, 255, 30, 1) 28%,
+    rgba(168, 240, 0, 1) 50%,
+    rgba(0, 209, 205, 1) 81%,
+    rgba(255, 91, 250, 1) 100%
+  );
+  color: transparent;
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  animation: bg-animation 20s infinite alternate;
 }
+
+@keyframes bg-animation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
 .arrow {
   width: 12rem;
+  transition: all 0.5s;
+}
+.arrow:hover {
+  stroke-width: 2px;
 }

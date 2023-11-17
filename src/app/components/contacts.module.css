@@ -5,6 +5,7 @@
 .contactContainer {
   display: flex;
   gap: var(--small-space);
+  align-items: center;
 }
 .download {
   display: flex;
@@ -12,8 +13,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--darkestgrey-color);
-  width: 120px;
-  height: 100px;
+  padding: 16px;
   border-radius: 12px;
   margin-left: var(--small-space);
 }

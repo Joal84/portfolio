@@ -41,16 +41,18 @@ export default function Card({
       <summary className={_style.description}>{description}</summary>
       <div className={_style.links}>
         {git ? (
-          <a href={git} target="_blank">
+          <a href={git} target="_blank" className={_style.icon_container}>
             <Github aria-label="github icon" className={_style.icons} />
+            <h3>Github</h3>
           </a>
         ) : (
           ""
         )}
 
         {www ? (
-          <a href={www} target="_blank">
+          <a href={www} target="_blank" className={_style.icon_container}>
             <Www aria-label="World wide web icon" className={_style.iconWww} />
+            <h3>Live Demo</h3>
           </a>
         ) : (
           ""

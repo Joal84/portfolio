@@ -1,25 +1,61 @@
 "use client";
+import AnimatedCursor from "react-animated-cursor";
+import { motion } from "framer-motion";
 import _style from "./page.module.css";
 import Cta from "./components/Cta";
 import Divider from "./components/Divider";
-import Info from "./components/Info";
 import Card from "./components/Card";
 import TechStack from "./components/TechStack";
+import LazyLoader from "./components/LazyLoader";
+//import Info from "./components/Info";
+import dynamic from "next/dynamic";
+
+const Info = dynamic(() => import("./components/Info"), {
+  loading: () => <p>Loading...</p>,
+});
 
 export default function Home() {
   return (
     <main>
+      <AnimatedCursor
+        innerSize={16}
+        outerSize={16}
+        color="241, 244, 70"
+        outerAlpha={0.4}
+        innerScale={2}
+        outerScale={6}
+        trailingSpeed={4}
+        clickables={[
+          "a",
+          "label[for]",
+          "select",
+          "textarea",
+          "button",
+          ".link",
+        ]}
+      />
+      <div className={_style.line}></div>
       <Cta />
-      <Divider title="About Me" />
+      <Divider title="About Me" id="about" />
       <div className={_style.image}></div>
       <div className={_style.backgroundAbout}>
         <div className={_style.aboutContainer}>
-          <Info />
+          <LazyLoader>
+            <motion.div
+              initial={{ x: "-40%" }}
+              animate={{ x: "0%" }}
+              transition={{ duration: 1.6, type: "spring" }}
+            >
+              <Info />
+            </motion.div>
+          </LazyLoader>
         </div>
       </div>
+
       <Divider
         title="Projects"
         infoText="Here are some selected projects that showcase my passion for web development, design and AI."
+        id="projects"
       />
       <div className={_style.projectsContainer}>
         <Card
@@ -47,6 +83,7 @@ export default function Home() {
         />
       </div>
       <Divider
+        id="tech"
         title="Tech Stack"
         infoText="Includes programming languages, frameworks, libraries, databases, and tools I’m skilled in."
       />

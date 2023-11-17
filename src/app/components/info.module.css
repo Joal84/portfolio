@@ -1,8 +1,10 @@
 .container {
   margin: 0 auto;
   max-width: 100%;
+  width: 800px;
   display: flex;
   justify-content: space-between;
+
   gap: var(--midbig-space);
 }
 .info {
@@ -14,7 +16,6 @@
   font-weight: 300;
   line-height: 120%;
   letter-spacing: 0.5px;
-  overflow-y: hidden;
 }
 .contactContainer {
   margin-top: var(--midbig-space);
@@ -27,6 +28,7 @@
   flex-direction: column;
   gap: var(--midbig-space);
   width: 500px;
+  height: 100%;
   max-width: 100%;
   background-color: var(--darkestgrey-color);
   padding: var(--small-space);
