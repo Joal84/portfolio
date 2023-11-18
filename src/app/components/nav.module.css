@@ -30,7 +30,6 @@
   gap: var(--small-space);
 }
 .greetings {
-  font-weight: 300;
   align-self: flex-end;
   margin-bottom: 10px;
 }

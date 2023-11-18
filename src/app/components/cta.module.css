@@ -1,15 +1,19 @@
 .container {
-  width: 100svw;
-  height: calc(100svh - 60px);
+  margin: 100px auto;
+  width: 60svw;
+  box-shadow: 0px 0px 120px 3cqi rgba(0, 0, 0, 0.389);
+  border-radius: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--big-space);
+  gap: var(--smallest-space);
+  background-color: var(--darkestgrey-color);
+  padding-top: 10.6rem;
+  padding-bottom: 1.6rem;
 }
 
 .headerTitle {
-  width: 990px;
   max-width: 100%;
   text-align: center;
   font-size: 6.4rem;
@@ -27,6 +31,7 @@
   color: transparent;
   background-clip: text;
   background-size: 400%;
+  padding: 36px;
   animation: bg-animation 20s infinite alternate;
 }
 
@@ -42,6 +47,7 @@
 .arrow {
   width: 12rem;
   transition: all 0.5s;
+  margin-bottom: var(--small-space);
 }
 .arrow:hover {
   stroke-width: 2px;

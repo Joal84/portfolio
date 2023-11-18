@@ -1,7 +1,7 @@
 .cardContainer {
   width: 400px;
   height: 660px;
-  background-color: #2e4242;
+  background-color: #163e3e;
   display: grid;
   flex-direction: column;
 
@@ -9,7 +9,6 @@
   border-radius: 12px;
   padding: var(--smallest-space);
   gap: 8px;
-  margin-bottom: var(--biggest-space);
 }
 .image {
   border-radius: 12px;
@@ -39,7 +38,7 @@
   align-self: initial;
 }
 .altColorContainer {
-  background-color: #1f2727;
+  background-color: #224141;
 }
 .icon_container {
   display: flex;

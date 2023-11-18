@@ -1,5 +1,5 @@
 .icon {
-  width: 50px;
+  width: 40px;
   stroke-width: 2px;
 }
 .contactContainer {
@@ -14,7 +14,7 @@
   justify-content: center;
   background-color: var(--darkestgrey-color);
   padding: 16px;
-  border-radius: 12px;
+  border-radius: 10px;
   margin-left: var(--small-space);
 }
 .singleContainer {

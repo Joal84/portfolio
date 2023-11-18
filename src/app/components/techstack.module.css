@@ -1,7 +1,7 @@
 .container {
-  max-width: 80svw;
-  height: auto;
-  margin: var(--biggest-space) auto var(--biggest-space) auto;
+  max-width: 70svw;
+
+  margin: var(--small-space) auto var(--small-space) auto;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -14,12 +14,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
 }
 .icon {
   fill: var(--white-color);
+  max-width: 100%;
 }
 
 .logo_container h3 {
-  margin-top: var(--smallest-space);
+  margin-top: 16px;
   font-size: 1.6rem;
 }

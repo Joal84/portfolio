@@ -1,26 +1,27 @@
-.image {
-  background: url(../../public/joao.webp);
-  width: 100svw;
-  height: 400px;
-  background-position: 90% 20%;
-  filter: saturate(69%);
-  margin-top: var(--midsmall-space);
-}
-.backgroundAbout {
-  width: 100svw;
-  padding-bottom: var(--biggest-space);
-  height: auto;
-  background-color: var(--darkgrey-color);
-  margin-bottom: var(--biggest-space);
-}
 .aboutContainer {
   margin: 0 auto;
-  width: 80%;
-  padding-top: var(--midbig-space);
+  width: 70%;
+}
+.outterWrapper {
+  margin-top: 30%;
+}
+.outterWrapperLast {
+  margin-top: 30%;
+  margin-bottom: 200px;
+}
+.wrapper {
+  background-color: var(--module-bg);
+  padding: 24px;
+  margin: 0 auto 0 auto;
+  width: 70%;
+  border-radius: var(--border-radious);
+  box-shadow: 0px 0px 120px 3cqi rgba(0, 0, 0, 0.389);
+}
+.subtext {
+  margin-bottom: var(--midbig-space);
+  font-size: 2rem;
 }
 .projectsContainer {
-  margin: var(--big-space) auto 0 auto;
-  width: 80%;
   display: flex;
   gap: var(--midbig-space);
   align-items: center;
@@ -29,10 +30,16 @@
 .line {
   position: fixed; /* Fixed position to keep it in view */
   top: 0;
-  left: 50.4%;
+  left: 50.1%;
+  border-radius: 200px;
   transform: translateX(-50%); /* Center the line horizontally */
   height: 100%; /* Full height of the viewport */
-  width: 3px;
-  background-color: #ffffff; /* Change the color as needed */
+  width: 10px;
+  background-color: rgb(151, 154, 77); /* Change the color as needed */
   z-index: -1; /* Set a high z-index to make sure it's behind other components */
+}
+.anchor {
+  position: relative;
+  top: 350px;
+  color: transparent;
 }

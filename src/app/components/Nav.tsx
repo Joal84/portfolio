@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import _style from "./nav.module.css";
+import Greetings from "./Greetings";
 
 export const onClickHandler = (
   e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
@@ -11,6 +12,11 @@ export const onClickHandler = (
   const element = document.getElementById(id);
   if (element) {
     element.scrollIntoView({
+      behavior: "smooth",
+    });
+  } else if (id === "beginning") {
+    window.scrollTo({
+      top: 0,
       behavior: "smooth",
     });
   }
@@ -27,18 +33,18 @@ export default function Nav() {
       if (windowHeight < 700) {
         setCurrentSection("none");
       }
-      if (windowHeight > 700 && windowHeight < 1800) {
+      if (windowHeight > 700 && windowHeight < 2000) {
         setCurrentSection("about");
       }
-      if (windowHeight > 1800 && windowHeight < 2800) {
+      if (windowHeight > 2000 && windowHeight < 3000) {
         setCurrentSection("projects");
       }
-      if (windowHeight > 2800 && windowHeight < 3500) {
+      if (windowHeight > 3800) {
         setCurrentSection("tech");
       }
     }
   };
-  console.log(currentSection);
+
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
 
@@ -54,8 +60,17 @@ export default function Nav() {
         <div className={_style.background}></div>
         <div className={_style.container}>
           <div className={_style.logoContainer}>
-            <h1 className={_style.logo}>João P.</h1>
-            <div className={_style.greetings}>Good Afternoon</div>
+            <Link
+              href="#beginning"
+              onClick={(e) => {
+                onClickHandler(e, "beginning");
+              }}
+            >
+              <h1 className={_style.logo}>João P.</h1>{" "}
+            </Link>
+            <div className={_style.greetings}>
+              <Greetings />
+            </div>
           </div>
           <ul className={_style.linkContainer}>
             <Link
