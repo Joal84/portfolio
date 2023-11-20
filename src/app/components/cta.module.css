@@ -22,10 +22,10 @@
   letter-spacing: 9.92px;
   background-image: linear-gradient(
     90deg,
-    rgba(255, 53, 53, 1) 1%,
-    rgba(241, 255, 30, 1) 28%,
+    rgba(241, 255, 30, 1) 1%,
+    rgba(0, 209, 205, 1) 28%,
     rgba(168, 240, 0, 1) 50%,
-    rgba(0, 209, 205, 1) 81%,
+    rgba(255, 53, 53, 1) 81%,
     rgba(255, 91, 250, 1) 100%
   );
   color: transparent;

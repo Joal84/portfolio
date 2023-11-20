@@ -15,7 +15,7 @@ export default function Contacts({ footer }: Props) {
     <div className={_style.contactContainer}>
       <a href="https://github.com/Joal84" target="_blank">
         <div className={_style.singleContainer}>
-          <Github className={`${_style.icon} ${footer && _style.icon_small}`} />
+          <Github className={` ${footer ? _style.icon_small : _style.icon} `} />
           {footer || <h3>GitHub</h3>}
         </div>
       </a>
@@ -25,7 +25,7 @@ export default function Contacts({ footer }: Props) {
       >
         <div className={_style.singleContainer}>
           <Linkedin
-            className={`${_style.icon} ${footer && _style.icon_small}`}
+            className={` ${footer ? _style.icon_small : _style.icon} `}
           />
           {footer || <h3>Linkedin</h3>}
         </div>
@@ -33,14 +33,14 @@ export default function Contacts({ footer }: Props) {
       <a href="https://www.instagram.com/joal_insta/" target="_blank">
         <div className={_style.singleContainer}>
           <Instagram
-            className={`${_style.icon} ${footer && _style.icon_small}`}
+            className={` ${footer ? _style.icon_small : _style.icon} `}
           />
           {footer || <h3>Instagram</h3>}
         </div>
       </a>
       <a href="mailto: joalmonog@gmail.com" target="_blank">
         <div className={_style.singleContainer}>
-          <Email className={`${_style.icon} ${footer && _style.icon_small}`} />
+          <Email className={` ${footer ? _style.icon_small : _style.icon} `} />
           {footer || <h3>Email</h3>}
         </div>
       </a>
@@ -52,7 +52,7 @@ export default function Contacts({ footer }: Props) {
           target="_blank"
         >
           <div className={_style.download}>
-            <Download className={_style.icon} />
+            <Download className={_style.iconDownload} />
             <h3>Download CV</h3>
           </div>
         </a>

@@ -1,17 +1,25 @@
 "use client";
 import AnimatedCursor from "react-animated-cursor";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import _style from "./page.module.css";
 import Cta from "./components/Cta";
 import Divider from "./components/Divider";
 import Card from "./components/Card";
 import TechStack from "./components/TechStack";
-
 import Info from "./components/Info";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 export default function Home() {
+  const [isHover, setIsHover] = useState<number | null>(null);
+
+  const handleMouseEnter = (number: number) => {
+    setIsHover(number);
+  };
+  const handleMouseLeave = () => {
+    setIsHover(null);
+  };
+  console.log(isHover);
   const controls = useAnimation();
   const controls2 = useAnimation();
   const controls3 = useAnimation();
@@ -63,12 +71,13 @@ export default function Home() {
       />
       <div className={_style.line}></div>
       <Cta />
-      <div className={_style.anchor} id="about"></div>
+
       <motion.div
         ref={ref}
         animate={controls}
         initial="hidden"
         variants={variants(-600)}
+        id="about"
       >
         <div className={_style.outterWrapper}>
           <Divider title="About Me" />
@@ -79,12 +88,13 @@ export default function Home() {
           <Divider />
         </div>
       </motion.div>
-      <div className={_style.anchor} id="projects"></div>
+
       <motion.div
         ref={ref2}
         animate={controls2}
         initial="hidden"
         variants={variants(600)}
+        id="projects"
       >
         <div className={_style.outterWrapper}>
           <Divider title="Projects" />
@@ -103,6 +113,10 @@ export default function Home() {
                 git="https://github.com/Joal84/tick-done"
                 www="https://tick-done.netlify.app/"
                 altColor={false}
+                handleMouseEnter={() => handleMouseEnter(1)}
+                handleMouseLeave={handleMouseLeave}
+                isBlur={isHover !== 1}
+                isHover={isHover}
               />
               <Card
                 image="/audio.webp"
@@ -110,26 +124,35 @@ export default function Home() {
                 description="This application is designed for environmental audio classification and aims to assist individuals who are deaf or have severe hearing loss by focusing on environmental and urban sounds."
                 git="https://github.com/Joal84/audio-class"
                 altColor={true}
+                handleMouseEnter={() => handleMouseEnter(2)}
+                handleMouseLeave={handleMouseLeave}
+                isBlur={isHover !== 2}
+                isHover={isHover}
               />
               <Card
                 image="/movie.webp"
                 title="MOVIE RECOMMENDER"
-                description="A movie recommendation website powered by an unsupervised learning non-negative matrix factorization algorithm. This project provides users with personalized movie recommendations based on their viewing history and preferences."
+                description="A movie recommendation website powered by an unsupervised learning non-negative matrix factorization algorithm. Provides users with personalized movie recommendations based on their viewing history and preferences."
                 git="https://github.com/Joal84/movie-recommender"
                 www="https://movie-recommender-joqt.onrender.com/"
                 altColor={false}
+                handleMouseEnter={() => handleMouseEnter(3)}
+                handleMouseLeave={handleMouseLeave}
+                isBlur={isHover !== 3}
+                isHover={isHover}
               />
             </div>
           </div>
           <Divider />
         </div>
       </motion.div>
-      <div className={_style.anchor} id="tech"></div>
+
       <motion.div
         ref={ref3}
         animate={controls3}
         initial="hidden"
         variants={variants(-600)}
+        id="tech"
       >
         <div className={_style.outterWrapperLast}>
           <Divider title="Tech Stack" />

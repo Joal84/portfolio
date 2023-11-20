@@ -17,6 +17,7 @@
   --midsmall-space: 4.2rem;
   --small-space: 2.4rem;
   --smallest-space: 1.6rem;
+  --animation: 0.2s;
 }
 *,
 *::before,

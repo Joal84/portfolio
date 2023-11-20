@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import _style from "./nav.module.css";
-import Greetings from "./Greetings";
 
 export const onClickHandler = (
   e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
@@ -11,10 +11,13 @@ export const onClickHandler = (
   e.preventDefault();
   const element = document.getElementById(id);
   if (element) {
-    element.scrollIntoView({
+    const targetScroll = element.offsetTop - 73;
+    window.scrollTo({
+      top: targetScroll,
       behavior: "smooth",
     });
-  } else if (id === "beginning") {
+  }
+  if (id === "beginning") {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -22,6 +25,9 @@ export const onClickHandler = (
   }
 };
 
+const Greetings = dynamic(() => import("./Greetings"), {
+  loading: () => <p>Loading...</p>,
+});
 export default function Nav() {
   const [sticky, setSticky] = useState(false);
   const [currentSection, setCurrentSection] = useState<string | null>(null);

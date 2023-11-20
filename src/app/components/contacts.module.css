@@ -1,5 +1,16 @@
 .icon {
-  width: 40px;
+  width: 60px;
+  height: 60px;
+
+  stroke-width: 2px;
+  background-color: var(--module-bg);
+  border-radius: 400px;
+  padding: 10px;
+}
+
+.iconDownload {
+  width: 50px;
+  height: 50px;
   stroke-width: 2px;
 }
 .contactContainer {
@@ -12,16 +23,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--darkestgrey-color);
+  background-color: var(--module-bg);
   padding: 16px;
   border-radius: 10px;
   margin-left: var(--small-space);
+  transition: all var(--animation);
+}
+.download:hover {
+  transform: scale(1.1);
+  background-color: rgb(28, 28, 28);
 }
 .singleContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all var(--animation);
+}
+.singleContainer:hover {
+  transform: scale(1.1);
 }
 .singleContainer h3 {
   margin-top: 1rem;

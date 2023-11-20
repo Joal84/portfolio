@@ -23,7 +23,7 @@
 }
 .projectsContainer {
   display: flex;
-  gap: var(--midbig-space);
+  gap: var(--midsmall-space);
   align-items: center;
   justify-content: center;
 }

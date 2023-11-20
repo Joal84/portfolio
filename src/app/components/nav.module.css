@@ -4,7 +4,7 @@
   z-index: 999;
 }
 .background {
-  background-color: rgba(31, 31, 31, 0.557);
+  background-color: #3838388e;
   backdrop-filter: blur(10px);
   margin: 0 auto;
   width: 100%;

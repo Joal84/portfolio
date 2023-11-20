@@ -1,56 +1,84 @@
 .cardContainer {
-  width: 400px;
-  height: 660px;
-  background-color: #163e3e;
-  display: grid;
+  background-color: #a6a6a62e;
+  display: flex;
   flex-direction: column;
-
+  height: 650px;
   align-items: center;
+  max-width: 100%;
   border-radius: 12px;
   padding: var(--smallest-space);
   gap: 8px;
+  box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.32);
+  transition: all var(--animation) ease-in-out;
 }
 .image {
   border-radius: 12px;
   max-width: 100%;
+  width: 360px;
   height: auto;
 }
 
 .description {
+  margin-top: 8px;
   line-height: 20px;
   align-self: start;
+  width: 360px;
+  margin-bottom: var(--smallest-space);
 }
 .links {
   display: flex;
   gap: var(--smallest-space);
-  align-self: end;
+  align-self: start;
+  margin-top: auto;
 }
+
 .icons {
-  width: 40px;
+  max-width: 100%;
+  width: 50px;
   stroke-width: 2px;
+  background-color: var(--module-bg);
+  border-radius: 400px;
+  padding: 8px;
 }
+
 .iconWww {
-  width: 38px;
+  width: 48px;
   stroke-width: 2px;
+  background-color: var(--module-bg);
+  padding: 8px;
+  border-radius: 400px;
 }
+
 .title {
-  justify-self: start;
-  align-self: initial;
+  margin-top: 8px;
+  align-self: start;
 }
 .altColorContainer {
-  background-color: #224141;
+  background-color: #2f2f2f;
 }
 .icon_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   align-items: center;
+  transition: all var(--animation);
 }
-
+.icon_container:hover {
+  stroke-width: 3px;
+  transform: scale(1.1);
+}
 .icon_container h3 {
   margin-top: 4px;
   font-size: 16px;
   font-weight: 300;
-  justify-self: end;
+}
+.blur {
+  filter: blur(10px);
+  transition: filter var(--animation) ease-in-out;
+}
+.empty {
+  transition: all var(--animation) ease-in-out;
+}
+.cardContainer:hover:not(.blur) {
+  transform: scale(1.05);
 }
