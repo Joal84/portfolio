@@ -18,8 +18,9 @@
 .info {
   margin-top: 16px;
   background-color: #a6a6a62e;
-  max-width: 80%;
-  width: 800px;
+  width: 80%;
+  max-width: 800px;
+
   padding: 24px;
   border-radius: var(--border-radious);
 }
@@ -40,9 +41,9 @@
   display: flex;
   flex-direction: column;
   margin-top: var(--smallest-space);
-  width: 485px;
+  max-width: 485px;
   height: 100%;
-  max-width: 100%;
+  width: 100%;
   background-color: var(--darkestgrey-color);
   padding: var(--small-space);
   border-radius: var(--border-radious);
@@ -61,4 +62,82 @@
   background-position: 50% 20%;
   filter: saturate(69%);
   border-radius: var(--border-radious);
+  background-size: 95%;
+}
+
+@media screen and (max-width: 1250px) {
+  .wrapper {
+    padding: 16px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+  .info {
+    width: 100%;
+  }
+  .mediaContainer {
+    flex-direction: row;
+    margin-top: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+
+    gap: 8.6rem;
+  }
+  .spotify,
+  .goodread {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .mediaContainer {
+    flex-direction: column;
+
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+
+    gap: var(--small-space);
+  }
+  .spotify,
+  .goodread {
+    max-width: 100%;
+    width: 100%;
+  }
+  .image {
+    background-size: 90%;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .info {
+    padding: 16px;
+  }
+  .image {
+    width: 100%;
+    height: 180px;
+    background-position: 50% 20%;
+    background-size: 90%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .info p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 120%;
+    letter-spacing: 0.5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .image {
+    width: 100%;
+    height: 100px;
+    background-position: 50% 20%;
+    background-size: 90%;
+  }
+  .wrapper {
+    padding: 8px;
+  }
 }

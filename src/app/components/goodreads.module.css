@@ -34,7 +34,7 @@
 }
 .gr_custom_author_1699617444 {
   /* customize your author names here */
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .gr_custom_tags_1699617444 {
   /* customize your tags here */
@@ -52,4 +52,21 @@
 
 .gr_custom_each_container_1699617444 a {
   text-decoration: none;
+}
+
+@media screen and (max-width: 1260px) {
+  .gr_custom_book_container_1699617444 {
+    /* customize your book covers here */
+    overflow: hidden;
+    width: 80px;
+    height: 125px;
+    float: left;
+    margin-right: var(--smallest-space);
+  }
+}
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
 }

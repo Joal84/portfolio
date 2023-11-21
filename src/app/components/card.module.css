@@ -2,7 +2,7 @@
   background-color: #a6a6a62e;
   display: flex;
   flex-direction: column;
-  height: 650px;
+  min-height: 650px;
   align-items: center;
   max-width: 100%;
   border-radius: 12px;
@@ -13,8 +13,8 @@
 }
 .image {
   border-radius: 12px;
-  max-width: 100%;
-  width: 360px;
+  max-width: 360px;
+  width: 100%;
   height: auto;
 }
 
@@ -22,7 +22,9 @@
   margin-top: 8px;
   line-height: 20px;
   align-self: start;
-  width: 360px;
+  max-width: 360px;
+  width: 100%;
+  word-wrap: break-word;
   margin-bottom: var(--smallest-space);
 }
 .links {
@@ -81,4 +83,41 @@
 }
 .cardContainer:hover:not(.blur) {
   transform: scale(1.05);
+}
+@media screen and (max-width: 1100px) {
+  .cardContainer:hover:not(.blur) {
+    transform: scale(1);
+  }
+  .cardContainer {
+    width: 360px;
+    scroll-snap-align: center;
+    margin: 16px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .cardContainer {
+    width: 320px;
+    padding: var(--smallest-space);
+    margin: 8px;
+    min-height: 580px;
+  }
+  .icons {
+    width: 46px;
+  }
+  .iconWww {
+    width: 43px;
+  }
+  .icon_container h3 {
+    font-size: 14px;
+  }
+  .description {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .cardContainer {
+    width: 260px;
+    margin: 4px;
+    min-height: 540px;
+  }
 }

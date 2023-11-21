@@ -53,3 +53,53 @@
   width: 35px;
   stroke-width: 2px;
 }
+@media screen and (max-width: 700px) {
+  .icon {
+    width: 50px;
+    height: 50px;
+
+    padding: 8px;
+  }
+  .iconDownload {
+    width: 40px;
+    height: 40px;
+  }
+  .download {
+    padding: 12px;
+  }
+  .singleContainer h3 {
+    font-size: 14px;
+  }
+  .download h3 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .contactContainer {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .download {
+    margin-left: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contactContainer {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .download {
+    display: none;
+  }
+  .icon {
+    width: 45px;
+    height: 45px;
+
+    padding: 8px;
+  }
+  .iconDownload {
+    display: none;
+  }
+}

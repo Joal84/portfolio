@@ -32,3 +32,40 @@
 .infoText {
   font-size: 2rem;
 }
+@media screen and (max-width: 1100px) {
+  .container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .title {
+    font-size: 2.4rem;
+  }
+  .circle {
+    height: 16px;
+    width: 16px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .circle {
+    height: 12px;
+    width: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .circle {
+    height: 12px;
+    width: 12px;
+  }
+}

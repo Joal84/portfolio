@@ -70,6 +70,7 @@ export default function Home() {
         ]}
       />
       <div className={_style.line}></div>
+
       <Cta />
 
       <motion.div

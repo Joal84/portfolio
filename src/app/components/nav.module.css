@@ -1,14 +1,14 @@
 .fullNav {
   width: 100%;
-  height: 60px;
+  min-height: 60px;
   z-index: 999;
 }
 .background {
   background-color: #3838388e;
   backdrop-filter: blur(10px);
-  margin: 0 auto;
+  margin: auto auto;
   width: 100%;
-  height: 60px;
+  min-height: 60px;
 }
 .container {
   position: absolute;
@@ -21,12 +21,13 @@
 }
 .compDiv {
   width: 100%;
-  height: 60px;
+  min-height: 60px;
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
+
   gap: var(--small-space);
 }
 .greetings {
@@ -73,4 +74,76 @@
   transform-origin: center;
   transform: scaleX(1);
   transition: var(--transition);
+}
+@media screen and (max-width: 800px) {
+  .logo {
+    font-size: 3.4rem;
+  }
+  .container {
+    top: 10px;
+  }
+  .greetings {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (max-width: 685px) {
+  .logo {
+    font-size: 2.8rem;
+  }
+  .container {
+    top: 12px;
+  }
+  .greetings {
+    margin-bottom: 4px;
+  }
+  .link {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .logo {
+    font-size: 2.4rem;
+  }
+  .container {
+    top: 12px;
+    width: 90%;
+  }
+  .greetings {
+    display: none;
+  }
+  .link {
+    font-size: 1.6rem;
+  }
+}
+.linkContainer {
+  gap: 16px;
+}
+
+@media screen and (max-width: 460px) {
+  .logo {
+    font-size: 2rem;
+  }
+  .container {
+    top: 12px;
+    width: 90%;
+  }
+  .greetings {
+    display: none;
+  }
+  .link {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    top: 18px;
+    width: 90%;
+  }
+  .greetings {
+    display: none;
+  }
+  .link {
+    font-size: 1.3rem;
+  }
 }
