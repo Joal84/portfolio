@@ -35,8 +35,8 @@
 }
 
 .icons {
-  max-width: 100%;
-  width: 50px;
+  width: 100%;
+  max-width: 50px;
   stroke-width: 2px;
   background-color: var(--module-bg);
   border-radius: 400px;
@@ -44,7 +44,8 @@
 }
 
 .iconWww {
-  width: 48px;
+  width: 100%;
+  max-width: 48px;
   stroke-width: 2px;
   background-color: var(--module-bg);
   padding: 8px;
@@ -94,6 +95,12 @@
     margin: 16px;
   }
 }
+@media screen and (max-width: 800px) {
+  .blur {
+    filter: blur(0px);
+    transition: none;
+  }
+}
 @media screen and (max-width: 560px) {
   .cardContainer {
     width: 320px;
@@ -114,10 +121,22 @@
     font-size: 14px;
   }
 }
+@media screen and (max-width: 450px) {
+  .cardContainer {
+    margin-left: 16px;
+  }
+}
 @media screen and (max-width: 420px) {
   .cardContainer {
     width: 260px;
-    margin: 4px;
+
     min-height: 540px;
+  }
+  .icons {
+    width: 50px;
+  }
+
+  .iconWww {
+    width: 48px;
   }
 }

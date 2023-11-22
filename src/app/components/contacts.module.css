@@ -73,6 +73,9 @@
   .download h3 {
     font-size: 14px;
   }
+  .icon_small {
+    stroke-width: 2px;
+  }
 }
 @media screen and (max-width: 540px) {
   .contactContainer {
@@ -91,7 +94,8 @@
     align-items: center;
   }
   .download {
-    display: none;
+    padding: 0;
+    background-color: transparent;
   }
   .icon {
     width: 45px;
@@ -100,6 +104,20 @@
     padding: 8px;
   }
   .iconDownload {
-    display: none;
+    padding: 8px;
+    background-color: var(--module-bg);
+    border-radius: 300px;
+    width: 48px;
+    height: 48px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .download {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 390px) {
+  .contactContainer {
+    gap: 7px;
   }
 }

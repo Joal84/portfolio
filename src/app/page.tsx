@@ -19,7 +19,7 @@ export default function Home() {
   const handleMouseLeave = () => {
     setIsHover(null);
   };
-  console.log(isHover);
+
   const controls = useAnimation();
   const controls2 = useAnimation();
   const controls3 = useAnimation();
@@ -100,7 +100,7 @@ export default function Home() {
         <div className={_style.outterWrapper}>
           <Divider title="Projects" />
 
-          <div className={_style.wrapper}>
+          <div className={_style.wrapperProject}>
             <p className={_style.subtext}>
               Here are some selected projects that showcase my passion for web
               development, design and AI.

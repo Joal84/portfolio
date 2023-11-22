@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   background-color: #222222;
-  border-radius: 8px;
+  border-radius: var(--border-radious);
   padding: 24px;
   box-shadow: 0px 0px 120px 3cqi rgba(0, 0, 0, 0.389);
 }
@@ -139,5 +139,6 @@
   }
   .wrapper {
     padding: 8px;
+    border-radius: 0;
   }
 }
