@@ -74,3 +74,8 @@ a:visited {
 a:active {
   text-decoration: dashed;
 }
+@media screen and (max-width: 750px) {
+  html {
+    cursor: none;
+  }
+}

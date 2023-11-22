@@ -125,18 +125,6 @@
     font-size: 2rem;
   }
   .container {
-    top: 12px;
-    width: 90%;
-  }
-  .greetings {
-    display: none;
-  }
-  .link {
-    font-size: 1.6rem;
-  }
-}
-@media screen and (max-width: 400px) {
-  .container {
     top: 18px;
     width: 90%;
   }
@@ -144,6 +132,6 @@
     display: none;
   }
   .link {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }

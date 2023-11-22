@@ -60,11 +60,11 @@
 
     justify-content: left;
   }
-  body .cursor {
-    display: "none";
-  }
 }
 @media screen and (max-width: 780px) {
+  .main {
+    cursor: none;
+  }
   .aboutContainer {
     width: 90%;
   }
@@ -101,6 +101,7 @@
     margin-left: 26px;
     padding-top: 24px;
     padding-right: 24px;
+    margin-bottom: 0px;
   }
   .aboutContainer {
     margin: 0 auto;

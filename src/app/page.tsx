@@ -77,7 +77,7 @@ export default function Home() {
         ref={ref}
         animate={controls}
         initial="hidden"
-        variants={variants(-600)}
+        variants={variants(-200)}
         id="about"
       >
         <div className={_style.outterWrapper}>
@@ -94,7 +94,7 @@ export default function Home() {
         ref={ref2}
         animate={controls2}
         initial="hidden"
-        variants={variants(600)}
+        variants={variants(200)}
         id="projects"
       >
         <div className={_style.outterWrapper}>
@@ -152,7 +152,7 @@ export default function Home() {
         ref={ref3}
         animate={controls3}
         initial="hidden"
-        variants={variants(-600)}
+        variants={variants(-200)}
         id="tech"
       >
         <div className={_style.outterWrapperLast}>
