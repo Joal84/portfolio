@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import _style from "./nav.module.css";
@@ -40,21 +40,19 @@ export default function Nav({
   const [sticky, setSticky] = useState(false);
   const [currentSection, setCurrentSection] = useState<string | null>(null);
 
-  const stickNavbar = () => {
+  const stickNavbar = useCallback(() => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      windowHeight > 200 ? setSticky(true) : setSticky(false);
-      if (windowHeight < 400) {
-        setCurrentSection("none");
-      }
+      windowHeight > 250 ? setSticky(true) : setSticky(false);
     }
-  };
+  }, []);
   useEffect(() => {
     inView && setCurrentSection("about");
     inView2 && setCurrentSection("projects");
     inView3 && setCurrentSection("tech");
-    console.log(inView);
-    console.log(currentSection);
+    if (inView === false && inView2 === false && inView3 === false) {
+      setCurrentSection("none");
+    }
   }, [inView, inView2, inView3, currentSection]);
 
   useEffect(() => {
@@ -64,7 +62,7 @@ export default function Nav({
       window.removeEventListener("scroll", stickNavbar);
     };
   }, []);
-
+  console.log(currentSection);
   return (
     <>
       {sticky ? <div className={_style.compDiv}></div> : ""}
