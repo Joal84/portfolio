@@ -9,9 +9,11 @@ import TechStack from "./components/TechStack";
 import Info from "./components/Info";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useMediaQuery } from "react-responsive";
 
 export default function Home() {
   const [isHover, setIsHover] = useState<number | null>(null);
+  const isDesktop = useMediaQuery({ query: "(min-width: 1100px)" });
 
   const handleMouseEnter = (number: number) => {
     setIsHover(number);
@@ -52,27 +54,27 @@ export default function Home() {
 
   return (
     <main>
-      <AnimatedCursor
-        innerSize={16}
-        outerSize={16}
-        color="241, 244, 70"
-        outerAlpha={0.4}
-        innerScale={2}
-        outerScale={6}
-        trailingSpeed={4}
-        clickables={[
-          "a",
-          "label[for]",
-          "select",
-          "textarea",
-          "button",
-          ".link",
-        ]}
-      />
+      {isDesktop && (
+        <AnimatedCursor
+          innerSize={16}
+          outerSize={16}
+          color="241, 244, 70"
+          outerAlpha={0.4}
+          innerScale={2}
+          outerScale={6}
+          trailingSpeed={4}
+          clickables={[
+            "a",
+            "label[for]",
+            "select",
+            "textarea",
+            "button",
+            ".link",
+          ]}
+        />
+      )}
       <div className={_style.line}></div>
-
       <Cta />
-
       <motion.div
         ref={ref}
         animate={controls}
@@ -89,7 +91,6 @@ export default function Home() {
           <Divider />
         </div>
       </motion.div>
-
       <motion.div
         ref={ref2}
         animate={controls2}
@@ -147,7 +148,6 @@ export default function Home() {
           <Divider />
         </div>
       </motion.div>
-
       <motion.div
         ref={ref3}
         animate={controls3}
