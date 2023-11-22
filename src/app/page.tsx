@@ -10,6 +10,8 @@ import Info from "./components/Info";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useMediaQuery } from "react-responsive";
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
 
 export default function Home() {
   const [isHover, setIsHover] = useState<number | null>(null);
@@ -26,13 +28,13 @@ export default function Home() {
   const controls2 = useAnimation();
   const controls3 = useAnimation();
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
   });
   const [ref2, inView2] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
   });
   const [ref3, inView3] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
   });
   // Define your animation variants
   const variants = (xValue: number) => {
@@ -73,6 +75,7 @@ export default function Home() {
           ]}
         />
       )}
+      <Nav inView={inView} inView2={inView2} inView3={inView3} />
       <div className={_style.line}></div>
       <Cta />
       <motion.div
@@ -167,6 +170,7 @@ export default function Home() {
           <Divider />
         </div>
       </motion.div>
+      <Footer />
     </main>
   );
 }

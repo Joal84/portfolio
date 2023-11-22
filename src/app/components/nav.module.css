@@ -1,7 +1,7 @@
 .fullNav {
   width: 100%;
   min-height: 60px;
-  z-index: 999;
+  z-index: 2;
 }
 .background {
   background-color: #3838388e;
@@ -135,7 +135,7 @@
     font-size: 1.4rem;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 376px) {
   .logo {
     font-size: 1.8rem;
   }

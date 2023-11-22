@@ -28,7 +28,15 @@ export const onClickHandler = (
 const Greetings = dynamic(() => import("./Greetings"), {
   loading: () => <p>Loading...</p>,
 });
-export default function Nav() {
+export default function Nav({
+  inView,
+  inView2,
+  inView3,
+}: {
+  inView: boolean;
+  inView2: boolean;
+  inView3: boolean;
+}) {
   const [sticky, setSticky] = useState(false);
   const [currentSection, setCurrentSection] = useState<string | null>(null);
 
@@ -36,20 +44,18 @@ export default function Nav() {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
       windowHeight > 200 ? setSticky(true) : setSticky(false);
-      if (windowHeight < 700) {
+      if (windowHeight < 400) {
         setCurrentSection("none");
-      }
-      if (windowHeight > 700 && windowHeight < 2500) {
-        setCurrentSection("about");
-      }
-      if (windowHeight > 2500 && windowHeight < 3400) {
-        setCurrentSection("projects");
-      }
-      if (windowHeight > 3400) {
-        setCurrentSection("tech");
       }
     }
   };
+  useEffect(() => {
+    inView && setCurrentSection("about");
+    inView2 && setCurrentSection("projects");
+    inView3 && setCurrentSection("tech");
+    console.log(inView);
+    console.log(currentSection);
+  }, [inView, inView2, inView3, currentSection]);
 
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
