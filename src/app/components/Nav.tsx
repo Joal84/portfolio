@@ -39,13 +39,13 @@ export default function Nav() {
       if (windowHeight < 700) {
         setCurrentSection("none");
       }
-      if (windowHeight > 700 && windowHeight < 2000) {
+      if (windowHeight > 700 && windowHeight < 2500) {
         setCurrentSection("about");
       }
-      if (windowHeight > 2000 && windowHeight < 3000) {
+      if (windowHeight > 2500 && windowHeight < 3400) {
         setCurrentSection("projects");
       }
-      if (windowHeight > 3800) {
+      if (windowHeight > 3400) {
         setCurrentSection("tech");
       }
     }
