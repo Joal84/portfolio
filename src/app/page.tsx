@@ -15,7 +15,7 @@ import Nav from "./components/Nav";
 
 export default function Home() {
   const [isHover, setIsHover] = useState<number | null>(null);
-  const isDesktop = useMediaQuery({ query: "(min-width: 1100px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1200px)" });
 
   const handleMouseEnter = (number: number) => {
     setIsHover(number);

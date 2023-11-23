@@ -107,8 +107,12 @@
     padding: 8px;
     background-color: var(--module-bg);
     border-radius: 300px;
-    width: 48px;
-    height: 48px;
+    width: 45px;
+    height: 45px;
+  }
+  .icon_small {
+    width: 30px;
+    stroke-width: 2px;
   }
 }
 @media screen and (max-width: 420px) {
@@ -118,6 +122,12 @@
 }
 @media screen and (max-width: 390px) {
   .contactContainer {
-    gap: 7px;
+    gap: 10px;
+  }
+  .singleContainer h3 {
+    font-size: 12px;
+  }
+  .download h3 {
+    font-size: 12px;
   }
 }

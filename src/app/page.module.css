@@ -93,12 +93,13 @@
     width: 100%;
     border-radius: 0;
     padding: 0;
+    padding-bottom: 24px;
   }
   .wrapperProject .subtext {
     margin-left: 24px;
     padding-top: 24px;
     padding-right: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 24px;
   }
   .aboutContainer {
     margin: 0 auto;
