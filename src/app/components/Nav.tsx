@@ -29,13 +29,13 @@ const Greetings = dynamic(() => import("./Greetings"), {
   loading: () => <p>Loading...</p>,
 });
 export default function Nav({
-  inView,
-  inView2,
-  inView3,
+  inViewAbout,
+  inViewProjects,
+  inViewTech,
 }: {
-  inView: boolean;
-  inView2: boolean;
-  inView3: boolean;
+  inViewAbout: boolean;
+  inViewProjects: boolean;
+  inViewTech: boolean;
 }) {
   const [sticky, setSticky] = useState(false);
   const [currentSection, setCurrentSection] = useState<string | null>(null);
@@ -47,11 +47,11 @@ export default function Nav({
     }
   }, []);
   useEffect(() => {
-    inView && setCurrentSection("about");
-    inView2 && setCurrentSection("projects");
-    inView3 && setCurrentSection("tech");
-    !inView && !inView2 && !inView3 && setCurrentSection("none");
-  }, [inView, inView2, inView3, currentSection]);
+    inViewAbout && setCurrentSection("about");
+    inViewProjects && setCurrentSection("projects");
+    inViewTech && setCurrentSection("tech");
+    !inViewAbout && !inViewProjects && !inViewTech && setCurrentSection("none");
+  }, [inViewAbout, inViewProjects, inViewTech, currentSection]);
 
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
@@ -60,7 +60,7 @@ export default function Nav({
       window.removeEventListener("scroll", stickNavbar);
     };
   }, []);
-  console.log(currentSection);
+
   return (
     <>
       {sticky ? <div className={_style.compDiv}></div> : ""}

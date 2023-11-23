@@ -24,16 +24,16 @@ export default function Home() {
     setIsHover(null);
   };
 
-  const controls = useAnimation();
-  const controls2 = useAnimation();
-  const controls3 = useAnimation();
-  const [ref, inView] = useInView({
+  const controlsAbout = useAnimation();
+  const controlsProjects = useAnimation();
+  const controlsTech = useAnimation();
+  const [ref, inViewAbout] = useInView({
     triggerOnce: false,
   });
-  const [ref2, inView2] = useInView({
+  const [ref2, inViewProjects] = useInView({
     triggerOnce: false,
   });
-  const [ref3, inView3] = useInView({
+  const [ref3, inViewTech] = useInView({
     triggerOnce: false,
   });
   // Define your animation variants
@@ -49,10 +49,17 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (inView) controls.start("visible");
-    if (inView2) controls2.start("visible");
-    if (inView3) controls3.start("visible");
-  }, [controls, controls2, controls3, inView, inView2, inView3]);
+    if (inViewAbout) controlsAbout.start("visible");
+    if (inViewProjects) controlsProjects.start("visible");
+    if (inViewTech) controlsTech.start("visible");
+  }, [
+    controlsAbout,
+    controlsProjects,
+    controlsTech,
+    inViewAbout,
+    inViewProjects,
+    inViewTech,
+  ]);
 
   return (
     <main>
@@ -75,12 +82,16 @@ export default function Home() {
           ]}
         />
       )}
-      <Nav inView={inView} inView2={inView2} inView3={inView3} />
+      <Nav
+        inViewAbout={inViewAbout}
+        inViewProjects={inViewProjects}
+        inViewTech={inViewTech}
+      />
       <div className={_style.line}></div>
       <Cta />
       <motion.div
         ref={ref}
-        animate={controls}
+        animate={controlsAbout}
         initial="hidden"
         variants={variants(-200)}
         id="about"
@@ -96,7 +107,7 @@ export default function Home() {
       </motion.div>
       <motion.div
         ref={ref2}
-        animate={controls2}
+        animate={controlsProjects}
         initial="hidden"
         variants={variants(200)}
         id="projects"
@@ -153,7 +164,7 @@ export default function Home() {
       </motion.div>
       <motion.div
         ref={ref3}
-        animate={controls3}
+        animate={controlsTech}
         initial="hidden"
         variants={variants(-200)}
         id="tech"

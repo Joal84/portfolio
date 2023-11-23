@@ -58,7 +58,11 @@
     font-size: 5.4rem;
   }
 }
-
+@media screen and (max-width: 1120px) {
+  .container {
+    border-radius: var(--border-radious);
+  }
+}
 @media screen and (max-width: 1000px) {
   .headerTitle {
     font-size: 4.4rem;
@@ -81,7 +85,6 @@
   .container {
     margin: 100px auto;
     width: 90svw;
-    border-radius: 12px;
   }
 }
 @media screen and (max-width: 500px) {

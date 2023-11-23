@@ -86,6 +86,12 @@
   .download {
     margin-left: 16px;
   }
+  .download h3 {
+    font-size: 12px;
+  }
+  .singleContainer h3 {
+    font-size: 12px;
+  }
 }
 @media screen and (max-width: 480px) {
   .contactContainer {
@@ -125,9 +131,12 @@
     gap: 10px;
   }
   .singleContainer h3 {
-    font-size: 12px;
+    font-size: 10px;
   }
   .download h3 {
-    font-size: 12px;
+    font-size: 10px;
+  }
+  .contactContainer {
+    gap: 16px;
   }
 }
