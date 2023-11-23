@@ -50,9 +50,7 @@ export default function Nav({
     inView && setCurrentSection("about");
     inView2 && setCurrentSection("projects");
     inView3 && setCurrentSection("tech");
-    if (inView === false && inView2 === false && inView3 === false) {
-      setCurrentSection("none");
-    }
+    !inView && !inView2 && !inView3 && setCurrentSection("none");
   }, [inView, inView2, inView3, currentSection]);
 
   useEffect(() => {
