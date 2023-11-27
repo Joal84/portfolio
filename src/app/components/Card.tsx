@@ -4,6 +4,7 @@ import _style from "./card.module.css";
 import SubTitle from "./SubTitle";
 import Github from "../../../public/contacts/github.svg";
 import Www from "../../../public/www.svg";
+import Link from "next/link";
 
 type Props = {
   image: string;
@@ -54,22 +55,29 @@ export default function Card({
         <summary className={_style.description}>{description}</summary>
         <div className={_style.links}>
           {git ? (
-            <a href={git} target="_blank" className={_style.icon_container}>
-              <Github aria-label="github icon" className={_style.icons} />
+            <Link
+              href={git}
+              target="_blank"
+              className={_style.icon_container}
+              aria-label="Github page"
+            >
+              <Github className={_style.icons} />
               <h3>Github</h3>
-            </a>
+            </Link>
           ) : (
             ""
           )}
 
           {www ? (
-            <a href={www} target="_blank" className={_style.icon_container}>
-              <Www
-                aria-label="World wide web icon"
-                className={_style.iconWww}
-              />
+            <Link
+              href={www}
+              target="_blank"
+              className={_style.icon_container}
+              aria-label="Live demo"
+            >
+              <Www className={_style.iconWww} />
               <h3>Live Demo</h3>
-            </a>
+            </Link>
           ) : (
             ""
           )}

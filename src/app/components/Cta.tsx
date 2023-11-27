@@ -14,6 +14,7 @@ export default function Cta() {
       <Link
         className={_style.arrow}
         href="/#about"
+        aria-label="Start"
         onClick={(e) => {
           onClickHandler(e, "about");
         }}

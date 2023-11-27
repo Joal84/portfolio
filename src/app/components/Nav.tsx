@@ -81,39 +81,45 @@ export default function Nav({
             </div>
           </div>
           <ul className={_style.linkContainer}>
-            <Link
-              className={`${_style.link} ${
-                currentSection === "about" ? _style.active : ""
-              }`}
-              href="#about"
-              onClick={(e) => {
-                onClickHandler(e, "about");
-              }}
-            >
-              About
-            </Link>
-            <Link
-              className={`${_style.link} ${
-                currentSection === "projects" ? _style.active : ""
-              }`}
-              href="#projects"
-              onClick={(e) => {
-                onClickHandler(e, "projects");
-              }}
-            >
-              Projects
-            </Link>
-            <Link
-              className={`${_style.link} ${
-                currentSection === "tech" ? _style.active : ""
-              }`}
-              href="#tech"
-              onClick={(e) => {
-                onClickHandler(e, "tech");
-              }}
-            >
-              Tech Stack
-            </Link>
+            <li>
+              <Link
+                className={`${_style.link} ${
+                  currentSection === "about" ? _style.active : ""
+                }`}
+                href="#about"
+                onClick={(e) => {
+                  onClickHandler(e, "about");
+                }}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`${_style.link} ${
+                  currentSection === "projects" ? _style.active : ""
+                }`}
+                href="#projects"
+                onClick={(e) => {
+                  onClickHandler(e, "projects");
+                }}
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`${_style.link} ${
+                  currentSection === "tech" ? _style.active : ""
+                }`}
+                href="#tech"
+                onClick={(e) => {
+                  onClickHandler(e, "tech");
+                }}
+              >
+                Tech Stack
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
