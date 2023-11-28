@@ -12,6 +12,7 @@ export default function Goodreads() {
                 title="The Name of the Wind (The Kingkiller Chronicle, #1)"
                 rel="nofollow"
                 href="https://www.goodreads.com/review/show/5905636243?utm_medium=api&amp;utm_source=custom_widget"
+                target="_blank"
               >
                 <Image
                   width={90}
@@ -25,15 +26,17 @@ export default function Goodreads() {
               <a
                 rel="nofollow"
                 href="https://www.goodreads.com/review/show/5905636243?utm_medium=api&amp;utm_source=custom_widget"
+                target="_blank"
               >
                 The Name of the Wind
               </a>
             </div>
             <div className={_style.gr_custom_author_1699617444}>
-              by{" "}
+              by
               <a
                 rel="nofollow"
                 href="https://www.goodreads.com/author/show/108424.Patrick_Rothfuss"
+                target="_blank"
               >
                 Patrick Rothfuss
               </a>
