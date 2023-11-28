@@ -61,7 +61,7 @@ export default function Contacts({ footer }: Props) {
         ""
       ) : (
         <Link
-          href="https://1drv.ms/b/s!Ai-njtIr98M2gvw-fG4tE0JZ2qHiSA?e=CfzWi9"
+          href="https://1drv.ms/b/s!Ai-njtIr98M2gv1qxysCFlsRRSXN6Q?e=ef5oIQ"
           target="_blank"
           aria-label="Download CV"
         >
