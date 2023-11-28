@@ -2,7 +2,7 @@
   /* customize your Goodreads widget container here*/
 
   border-radius: 12px;
-  padding: 10px 5px 10px 5px;
+  padding: 10px 5px 5px 5px;
   background-color: var(--darkgrey-color);
   width: 100%;
   max-width: 100%;
@@ -22,13 +22,11 @@
 
   margin-left: 10px;
   overflow: auto;
-  padding-bottom: 4px;
 }
 .gr_custom_book_container_1699617444 {
   /* customize your book covers here */
   overflow: hidden;
-  width: 80px;
-  height: 120px;
+
   float: left;
   margin-right: var(--smallest-space);
 }
