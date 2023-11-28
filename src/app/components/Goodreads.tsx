@@ -16,7 +16,7 @@ export default function Goodreads() {
               >
                 <Image
                   width={90}
-                  height={121}
+                  height={146}
                   alt="The Name of the Wind"
                   src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1270352123l/186074._SX90_.jpg"
                 />
