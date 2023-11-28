@@ -67,11 +67,7 @@ export default function Home() {
       <Script
         src="https://sdk.scdn.co/spotify-player.js"
         strategy="lazyOnload"
-        onLoad={() =>
-          console.log(`script loaded correctly, window.FB has been populated`)
-        }
       />
-
       <main>
         {isDesktop && (
           <AnimatedCursor

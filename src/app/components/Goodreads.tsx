@@ -14,10 +14,10 @@ export default function Goodreads() {
                 href="https://www.goodreads.com/review/show/5905636243?utm_medium=api&amp;utm_source=custom_widget"
               >
                 <Image
-                  width={80}
-                  height={120}
+                  width={90}
+                  height={121}
                   alt="The Name of the Wind"
-                  src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1270352123l/186074._SX50_.jpg"
+                  src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1270352123l/186074._SX90_.jpg"
                 />
               </a>
             </div>
