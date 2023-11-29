@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: "Joao P. Web Developer",
     images: [
       {
-        url: "./public/joao.webp",
+        url: "https://1drv.ms/i/s!Ai-njtIr98M2gscbMQhF8cEZOXGQEg?e=axB9uj",
       },
     ],
     locale: "en_US",
