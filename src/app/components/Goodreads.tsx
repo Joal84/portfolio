@@ -32,7 +32,7 @@ export default function Goodreads() {
               </a>
             </div>
             <div className={_style.gr_custom_author_1699617444}>
-              by
+              by{" "}
               <a
                 rel="nofollow"
                 href="https://www.goodreads.com/author/show/108424.Patrick_Rothfuss"

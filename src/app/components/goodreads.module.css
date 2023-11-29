@@ -51,20 +51,16 @@
 .gr_custom_each_container_1699617444 a {
   text-decoration: none;
 }
-
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1250px) {
   .gr_custom_book_container_1699617444 {
     /* customize your book covers here */
-    overflow: hidden;
-    width: 80px;
-    height: 125px;
-    float: left;
-    margin-right: var(--smallest-space);
+    height: 136px;
   }
 }
+
 @media screen and (max-width: 400px) {
   .title {
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 300;
   }
 }
