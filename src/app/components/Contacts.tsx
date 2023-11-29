@@ -61,8 +61,9 @@ export default function Contacts({ footer }: Props) {
         ""
       ) : (
         <Link
-          href="https://1drv.ms/b/s!Ai-njtIr98M2gv1qxysCFlsRRSXN6Q?e=ef5oIQ"
+          href="/files/Joao_Pinheiro _Full_Stack.pdf"
           target="_blank"
+          rel="noopener noreferrer"
           aria-label="Download CV"
         >
           <div className={_style.download}>
