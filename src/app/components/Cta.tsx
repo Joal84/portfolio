@@ -8,8 +8,7 @@ export default function Cta() {
   return (
     <div className={_style.container}>
       <header className={_style.headerTitle}>
-        An adaptable web developer with a proven track record in both creative
-        and technical domains.
+        A versatile developer excelling in creative and technical domains.
       </header>
       <Link
         className={_style.arrow}

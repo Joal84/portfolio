@@ -6,11 +6,11 @@ const quicksand = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   openGraph: {
-    title: "João Pinheiro Web Developer Portfolio",
+    title: "João Pinheiro Frontend Developer Portfolio",
     description:
-      "An adaptable web developer with a proven track record in both creative and technical domains.",
+      "An adaptable frontend developer with a proven track record in both creative and technical domains.",
     url: "https://www.joaop.info/",
-    siteName: "Joao P. Web Developer",
+    siteName: "Joao P. Jr. Frontend Developer",
     images: [
       {
         url: "https://1drv.ms/i/s!Ai-njtIr98M2gscbMQhF8cEZOXGQEg?e=axB9uj",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  title: "João Pinheiro Web Developer Portfolio",
+  title: "João Pinheiro Frontend Developer Portfolio",
   description:
-    "An adaptable web developer with a proven track record in both creative and technical domains.",
+    "An adaptable frontend developer with a proven track record in both creative and technical domains.",
 };
 
 export default function RootLayout({
