@@ -11,7 +11,7 @@ export default function Info() {
       <section className={_style.container}>
         <div className={_style.info}>
           <p>
-            Greetings, I&apos;m João Pinheiro, a seasoned frontend developer
+            Greetings, I&apos;m João Pinheiro, a seasoned full stack developer
             with roots in the Azores, Portugal, and a decade of residence in the
             dynamic city of Berlin.
           </p>
