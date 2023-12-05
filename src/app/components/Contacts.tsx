@@ -61,7 +61,7 @@ export default function Contacts({ footer }: Props) {
         ""
       ) : (
         <Link
-          href="/files/Joao_Pinheiro_FrontEnd.pdf"
+          href="/files/Joao_Pinheiro_full_stack.pdf"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Download CV"
